@@ -1,0 +1,16 @@
+creation_timestamp: 1771675808344
+current_stage: Production
+deployment_job_state: null
+description: 'Best model with accuracy: 0.9403 trained on 4088 samples'
+last_updated_timestamp: 1771675808383
+model_id: m-2b0f52a528634b589abd382e9c61f32e
+name: stroke_prediction_model
+run_id: 28d29d66220647ee8b8c21ecd5bc75bb
+run_link: null
+source: models:/m-2b0f52a528634b589abd382e9c61f32e
+status: READY
+status_message: null
+storage_location: file:///home/mohamed/assignment2/mlruns/137460674926630800/models/m-2b0f52a528634b589abd382e9c61f32e/artifacts
+user_id: null
+version: 2
+workspace: default

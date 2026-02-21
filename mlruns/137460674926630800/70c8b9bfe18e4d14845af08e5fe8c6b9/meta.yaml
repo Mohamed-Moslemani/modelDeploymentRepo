@@ -1,0 +1,14 @@
+artifact_uri: file:///home/mohamed/assignment2/mlruns/137460674926630800/70c8b9bfe18e4d14845af08e5fe8c6b9/artifacts
+end_time: 1771676127088
+entry_point_name: ''
+experiment_id: '137460674926630800'
+lifecycle_stage: active
+run_id: 70c8b9bfe18e4d14845af08e5fe8c6b9
+run_name: Run5_Shallow_LimitedFeatures_MI_75-25Split
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1771676124156
+status: 3
+tags: []
+user_id: mohamed

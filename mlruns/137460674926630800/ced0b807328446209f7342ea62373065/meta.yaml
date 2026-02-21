@@ -1,0 +1,14 @@
+artifact_uri: file:///home/mohamed/assignment2/mlruns/137460674926630800/ced0b807328446209f7342ea62373065/artifacts
+end_time: 1771675645479
+entry_point_name: ''
+experiment_id: '137460674926630800'
+lifecycle_stage: active
+run_id: ced0b807328446209f7342ea62373065
+run_name: Run1_Baseline_AllFeatures_80-20Split
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1771675642033
+status: 3
+tags: []
+user_id: mohamed

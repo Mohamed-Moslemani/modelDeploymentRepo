@@ -1,0 +1,14 @@
+artifact_uri: file:///home/mohamed/assignment2/mlruns/137460674926630800/c9cfd6f72e664ccba9d7ae8ea46b902f/artifacts
+end_time: 1771680883771
+entry_point_name: ''
+experiment_id: '137460674926630800'
+lifecycle_stage: active
+run_id: c9cfd6f72e664ccba9d7ae8ea46b902f
+run_name: Run4_Deep_LimitedFeatures_F_80-20Split
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1771680881161
+status: 3
+tags: []
+user_id: mohamed

@@ -1,0 +1,14 @@
+artifact_uri: file:///home/mohamed/assignment2/mlruns/137460674926630800/73868a0e42fe4950b8ca31f4df2797f5/artifacts
+end_time: 1771680878429
+entry_point_name: ''
+experiment_id: '137460674926630800'
+lifecycle_stage: active
+run_id: 73868a0e42fe4950b8ca31f4df2797f5
+run_name: Run2_Aggressive_KBestF_70-30Split
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1771680875679
+status: 3
+tags: []
+user_id: mohamed

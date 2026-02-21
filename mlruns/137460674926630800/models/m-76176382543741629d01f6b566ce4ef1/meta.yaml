@@ -1,0 +1,10 @@
+artifact_location: file:///home/mohamed/assignment2/mlruns/137460674926630800/models/m-76176382543741629d01f6b566ce4ef1/artifacts
+creation_timestamp: 1771676945475
+experiment_id: '137460674926630800'
+last_updated_timestamp: 1771676948393
+model_id: m-76176382543741629d01f6b566ce4ef1
+model_type: null
+name: models
+source_run_id: 1021f84e6c824cbcb5e89bc72f00899c
+status: 2
+status_message: null

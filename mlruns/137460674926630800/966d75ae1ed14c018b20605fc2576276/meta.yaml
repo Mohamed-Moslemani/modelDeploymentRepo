@@ -1,0 +1,14 @@
+artifact_uri: file:///home/mohamed/assignment2/mlruns/137460674926630800/966d75ae1ed14c018b20605fc2576276/artifacts
+end_time: 1771675950085
+entry_point_name: ''
+experiment_id: '137460674926630800'
+lifecycle_stage: active
+run_id: 966d75ae1ed14c018b20605fc2576276
+run_name: Run3_Conservative_KBestMI_90-10Split
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1771675947091
+status: 3
+tags: []
+user_id: mohamed
