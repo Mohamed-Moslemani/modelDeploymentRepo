@@ -1,23 +1,32 @@
 import mlflow
 import logging
 import os
+from config.env_loader import EnvLoader
 
 logger = logging.getLogger(__name__)
 
 class Config:
     def __init__(self):
-        self.dir_path = "archive/"
-        self.file_path = "data.csv"
-        self.file_type = "csv"
+        # Load environment variables from .env files
+        EnvLoader.load()
+        
+        # Load configuration from environment variables
+        self.dir_path = EnvLoader.get("DATA_DIR_PATH", "archive/")
+        self.file_path = EnvLoader.get("DATA_FILE_PATH", "data.csv")
+        self.file_type = EnvLoader.get("DATA_FILE_TYPE", "csv")
+        
+        # MLflow configuration
+        self.mlflow_tracking_uri = EnvLoader.get("MLFLOW_TRACKING_URI", "file:./mlruns")
+        self.mlflow_experiment_name = EnvLoader.get("MLFLOW_EXPERIMENT_NAME", "my_experiment")
         
         # Configure MLflow
         try:
-            # Use local filesystem backend for artifact storage
-            mlflow.set_tracking_uri("file:./mlruns")
-            mlflow.set_experiment("my_experiment")
+            # Use configured tracking URI for artifact storage
+            mlflow.set_tracking_uri(self.mlflow_tracking_uri)
+            mlflow.set_experiment(self.mlflow_experiment_name)
             # End any active runs before configuration
             mlflow.end_run()
-            logger.info("MLflow configured successfully with local filesystem backend")
+            logger.info(f"MLflow configured successfully with tracking URI: {self.mlflow_tracking_uri}")
         except Exception as e:
             logger.error(f"Failed to configure MLflow: {e}")
 
