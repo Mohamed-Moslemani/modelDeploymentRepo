@@ -1,0 +1,7 @@
+/venv/
+**.csv
+*.pyc
+*.pkl
+/logs/
+scratch.ipynb
+.env.dev
