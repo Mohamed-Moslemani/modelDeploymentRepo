@@ -45,6 +45,8 @@ class StrokePredictionUI:
             categorical_cols: List of categorical column names
         """
         self.categorical_cols = categorical_cols
+        # Initialize label_encoders as None - they will be created on-demand during preprocessing
+        # if they haven't been set from training data
         self.inference.set_label_encoders({col: None for col in categorical_cols})
     
     def predict_single(self, age, gender, hypertension, heart_disease, 
