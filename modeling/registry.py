@@ -68,7 +68,7 @@ class ModelRegistry:
             else:
                 raise ValueError("Either version or stage must be provided")
             
-            model = mlflow.pyfunc.load_model(model_uri)
+            model = mlflow.sklearn.load_model(model_uri)
             logger.info(f"Model loaded from registry: {model_uri}")
             return model
         except Exception as e:
@@ -128,3 +128,45 @@ class ModelRegistry:
         except Exception as e:
             logger.error(f"Error getting best model by metric: {e}")
             raise
+    
+    def get_run_params(self, run_id):
+        """
+        Get all parameters from a specific run.
+        
+        Args:
+            run_id: The MLflow run ID
+            
+        Returns:
+            Dictionary of run parameters
+        """
+        try:
+            run = self.client.get_run(run_id)
+            return run.data.params
+        except Exception as e:
+            logger.error(f"Error getting run parameters: {e}")
+            raise
+    
+    def get_selected_features(self, run_id):
+        """
+        Get the selected features used in a specific run.
+        
+        Args:
+            run_id: The MLflow run ID
+            
+        Returns:
+            List of selected feature names, or None if not found
+        """
+        try:
+            params = self.get_run_params(run_id)
+            selected_features_str = params.get("selected_features")
+            
+            if selected_features_str:
+                selected_features = selected_features_str.split(",")
+                logger.info(f"Retrieved {len(selected_features)} selected features from run {run_id}")
+                return selected_features
+            
+            logger.warning(f"No selected features found in run {run_id}")
+            return None
+        except Exception as e:
+            logger.error(f"Error getting selected features: {e}")
+            return None

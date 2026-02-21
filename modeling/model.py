@@ -99,19 +99,15 @@ class ModelTrainer:
             model_path: Path to the saved model file
         """
         try:
-            # Log hyperparameters
             mlflow.log_params(hyperparameters)
             logger.info(f"Logged hyperparameters to MLflow: {hyperparameters}")
             
-            # Log metrics
             mlflow.log_metrics(metrics)
             logger.info(f"Logged metrics to MLflow: {metrics}")
             
-            # Log model artifact
-            mlflow.log_artifact(model_path, artifact_path="models")
-            logger.info(f"Logged model artifact to MLflow")
+            mlflow.sklearn.log_model(self.model, "models")
+            logger.info(f"Logged sklearn model to MLflow")
             
-            # Log additional metadata
             mlflow.log_param("model_type", "RandomForestClassifier")
             mlflow.log_param("training_samples", len(self.X_train))
             mlflow.log_param("test_samples", len(self.X_test))
