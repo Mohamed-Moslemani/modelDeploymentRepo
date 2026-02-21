@@ -11,6 +11,18 @@ import logging
 logger = logging.getLogger(__name__)
 
 
+def load_env(env_file=None):
+    """
+    Load environment variables from .env file.
+    
+    This is a convenience function that wraps EnvLoader.load().
+    
+    Args:
+        env_file (str): Path to .env file. If None, tries .env.dev, then .env.example
+    """
+    EnvLoader.load(env_file)
+
+
 class EnvLoader:
     """Load and manage environment variables from .env files."""
     
